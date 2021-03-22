@@ -7,7 +7,7 @@ function Nav() {
     <div className="nav">
     <Header as='h2' icon textAlign='center' color='blue'>
       <Icon name='gem' color='red' />
-      <Header.Content>Welcome To The Mintbean Inspired Puzzle Game!</Header.Content>
+      <Header.Content>Welcome To The Mintbean Inspired (Not-A-Puzzle) Game!</Header.Content>
     </Header>
   </div>
   )

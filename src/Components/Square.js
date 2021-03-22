@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 
-function Square() {
+function Square(props) {
 
-  const [value, setValue] = useState(null)
 
   return (
-    <button className="square"
-      onClick={() => setValue("X")}>
-      {value}
+    <button className="square" onClick={() => props.onClick()}> 
+    {/* also acceptable, either pass REFERENCE to function, or wrap in a thunk: onClick={props.onClick} */}
+      {props.value}
     </button>
   )
 

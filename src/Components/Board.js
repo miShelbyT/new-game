@@ -1,13 +1,64 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Square from './Square'
 
-function Board(){
+function Board() {
 
-  const status = 'Next player: X';
+  const [squares, setSquares] = useState(Array(9).fill(null))
+  const [xIsNext, setXIsNext] = useState(true)
+  const [status, setStatus] = useState('Next player: ' + (xIsNext ? '💎' : '🧁'))
+  // let status = 'Next player: ' + (xIsNext ? '💎' : '🧁');
 
+  // function passes Square component and props inside Board return!
   function renderSquare(i) {
-    return <Square value={i}/>;
+    return (
+      <Square
+        value={squares[i]}
+        onClick={() => handleClick(i)}
+      />
+    );
   }
+
+
+  // look for tic tac toe winner via arrays below!
+  function calculateWinner(squares) {
+    const lines = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+    for (let i = 0; i < lines.length; i++) {
+      const [a, b, c] = lines[i];
+      if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+        return squares[a];
+      }
+    }
+    return null;
+  }
+
+  function renderWinner(){
+    const winner = calculateWinner(squares);
+    
+    if (winner) {
+      setStatus('We Have A Winner!!! ' + winner);
+    } else {
+      setStatus('Next player: ' + (xIsNext ? '💎' : '🧁'));
+    }
+  }
+
+  function handleClick(i){
+    let updatedSquares = squares.slice()
+    renderWinner()
+    if(calculateWinner(squares) || squares[i]) return
+    updatedSquares[i] = xIsNext ? '💎' : '🧁'
+    setSquares(updatedSquares)
+    setXIsNext(!xIsNext)
+  }
+
 
   return (
     <div className='board'>
