@@ -1,15 +1,22 @@
 import React from 'react'
-import { Header, Icon } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+import { Header, Icon, Button } from 'semantic-ui-react'
+
 
 function Nav() {
 
   return (
     <div className="nav">
-    <Header as='h2' icon textAlign='center' color='yellow'>
-      <Icon name='gem' color='blue' />
-      <Header.Content>Welcome To The Mintbean-Inspired (Not-A-Puzzle) Game!</Header.Content>
-    </Header>
-  </div>
+      <Header as='h2' icon textAlign='center' color='yellow'>
+        <Link to='/home'>
+          <Icon name='gem' color='blue' />
+        </Link>
+        <Header.Content>Welcome To The Mintbean-Inspired (Not-A-Puzzle) Game!</Header.Content>
+      </Header>
+      <Button as={Link} to='/play' inverted color='violet' >
+        Click Here To Begin!
+      </Button>
+    </div>
   )
 
 }
