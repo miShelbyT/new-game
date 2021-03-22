@@ -2,8 +2,19 @@ body {
   font: 14px "Century Gothic", Futura, sans-serif;
 }
 
+.nav {
+  background-color: black;
+  padding: 1.5em;
+}
+
+
 ol, ul {
   padding-left: 30px;
+}
+
+.game-page {
+  display: flex;
+  justify-content: center;
 }
 
 .board-row:after {

@@ -1,16 +1,15 @@
 import React from 'react'
-import { Header, Icon, Divider } from 'semantic-ui-react'
+import { Header, Icon } from 'semantic-ui-react'
 
 function Nav() {
 
   return (
-    <>
-    <Header as='h2' icon textAlign='center' >
-      <Icon name='gem' circular color='red' />
+    <div className="nav">
+    <Header as='h2' icon textAlign='center' color='blue'>
+      <Icon name='gem' color='red' />
       <Header.Content>Welcome To The Mintbean Inspired Puzzle Game!</Header.Content>
     </Header>
-    <Divider />
-  </>
+  </div>
   )
 
 }
