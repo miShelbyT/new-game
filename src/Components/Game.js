@@ -1,4 +1,5 @@
 import React from 'react'
+import Board from './Board'
 
 function Game() {
   return (
@@ -14,3 +15,5 @@ function Game() {
   );
 
 }
+
+export default Game

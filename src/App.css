@@ -12,7 +12,7 @@ ol, ul {
   padding-left: 30px;
 }
 
-.game-page {
+.game {
   display: flex;
   justify-content: center;
 }
@@ -25,6 +25,9 @@ ol, ul {
 
 .status {
   margin-bottom: 10px;
+  font-family:cursive;
+  font-weight: bold;
+  font-size: medium;
 }
 
 .square {

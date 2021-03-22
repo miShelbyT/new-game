@@ -6,7 +6,7 @@ function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [xIsNext, setXIsNext] = useState(true)
   const [status, setStatus] = useState('Next player: ' + (xIsNext ? '💎' : '🧁'))
-  // let status = 'Next player: ' + (xIsNext ? '💎' : '🧁');
+
 
   // function passes Square component and props inside Board return!
   function renderSquare(i) {
@@ -40,23 +40,25 @@ function Board() {
     return null;
   }
 
-  function renderWinner(){
+  function determineStatus(){
     const winner = calculateWinner(squares);
-    
     if (winner) {
-      setStatus('We Have A Winner!!! ' + winner);
+      setStatus('We Have A Winner!!! Congrats to ' + winner);
     } else {
-      setStatus('Next player: ' + (xIsNext ? '💎' : '🧁'));
+      setStatus('Next player: ' + (xIsNext ? '🧁' : '💎'));
     }
   }
 
   function handleClick(i){
-    let updatedSquares = squares.slice()
-    renderWinner()
-    if(calculateWinner(squares) || squares[i]) return
+    determineStatus()
+    setXIsNext(!xIsNext)
+    const updatedSquares = squares.slice()
+    console.log("what is this:", calculateWinner(updatedSquares))
+    console.log("and what is this:", updatedSquares[i])
+    // if one of the below conditions return a value (i.e., are not null), then we return/exit
+    if(calculateWinner(updatedSquares) || updatedSquares[i]) return
     updatedSquares[i] = xIsNext ? '💎' : '🧁'
     setSquares(updatedSquares)
-    setXIsNext(!xIsNext)
   }
 
 
