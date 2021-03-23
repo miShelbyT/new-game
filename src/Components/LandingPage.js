@@ -9,7 +9,7 @@ function LandingPage() {
       <Segment textAlign='center'>
         <Header as='h3' style={{margin: 10}}>Welcome To My First Ever Little Game App: 💎/🧁 Tic Tac Toe (Xs and Os are so 2010)!</Header>
         <Header as='h5' style={{margin: 10}}>This app is tic tac toe but cuter, if I do say so myself. Click on the purple button to begin ⬆️  <br></br>  I hope you enjoy it!</Header>
-        <Image src='https://i.imgur.com/qpcYOFE.png' size='medium' className='game-image' />
+        <Image src='https://i.imgur.com/viODzIG.png' size='medium' className='game-image' />
       </Segment>
       <Segment.Group horizontal>
         <Segment>
