@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-function Square(props) {
+function Square({value, onClick}) {
 
 
   return (
-    <button className="square" onClick={() => props.onClick()}> 
+    <button className="square" onClick={() => onClick()}> 
     {/* also acceptable, either pass REFERENCE to function, or wrap in a thunk: onClick={props.onClick} */}
-      {props.value}
+      {value}
     </button>
   )
 
