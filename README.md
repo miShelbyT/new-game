@@ -4,7 +4,7 @@ This is my first project since completing my bootcamp program, my first game bui
 
 This is my first stab at functional components using hooks, and destructuring props. Very proud!
 
-Project was created with Reactjs and Semantic UI.
+Project was created with Reactjs and Semantic UI and riffed off of a Reactjs tic tac toe tutorial with additional functionality.
 
 Thanks so much to Monarch and Navi and everyone at Mintbean.io for putting these events together.
 
