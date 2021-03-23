@@ -1,6 +1,8 @@
 Submitted to Mintbean's March 2021 Hackathon/Learnathon project/challenge.
 
-Thanks so much to Monarch and Navi for putting these events together.
+This is my first project since completing my bootcamp program, my first game build (with a little assist from Reactjs) and my first submission to Mintbean's or any hackathon and I am very happy just to show up.
+
+Thanks so much to Monarch and Navi and everyone at Mintbean for putting these events together.
 
 
 
