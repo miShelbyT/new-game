@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Square from './Square'
+import { Button } from 'semantic-ui-react'
 
 function Board() {
 
@@ -40,10 +41,14 @@ function Board() {
     return null;
   }
 
-  function determineStatus(){
+  function determineStatus(i){
     const winner = calculateWinner(squares);
+    const updatedSquares = squares.slice()
     if (winner) {
       setStatus('We Have A Winner!!! Congrats to ' + winner);
+      alert('Congrats to ' + winner)
+    } else if (!updatedSquares.includes(null)) {
+      alert("There is no winner this time. Please try again!")
     } else {
       setStatus('Next player: ' + (xIsNext ? '🧁' : '💎'));
     }
@@ -53,18 +58,24 @@ function Board() {
     determineStatus()
     setXIsNext(!xIsNext)
     const updatedSquares = squares.slice()
-    console.log("what is this:", calculateWinner(updatedSquares))
-    console.log("and what is this:", updatedSquares[i])
+    // console.log("what is this:", calculateWinner(updatedSquares))
+    // console.log("and what is this:", updatedSquares[i])
     // if one of the below conditions return a value (i.e., are not null), then we return/exit
     if(calculateWinner(updatedSquares) || updatedSquares[i]) return
     updatedSquares[i] = xIsNext ? '💎' : '🧁'
     setSquares(updatedSquares)
   }
 
+  function handleRefresh(){
+    setSquares((Array(9).fill(null)))
+    setXIsNext(true)
+    setStatus('Next player: 💎')
+  }
+
 
   return (
     <div className='board'>
-      <div className="status">{status}</div>
+      <div className="status" style={{fontSize: 24}}>{status}</div>
       <div className="board-row">
         {renderSquare(0)}
         {renderSquare(1)}
@@ -80,6 +91,10 @@ function Board() {
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
+      <br></br>
+      <Button color='blue' onClick={handleRefresh}>
+        Start A New Game!
+      </Button>
     </div>
   );
 

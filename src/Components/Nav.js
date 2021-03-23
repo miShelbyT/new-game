@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Header, Icon, Button } from 'semantic-ui-react'
 
 
 function Nav() {
-
-  const [button, setButton] = useState()
-  const [clicked, setClicked] = useState(false)
 
   return (
     <div className="nav">

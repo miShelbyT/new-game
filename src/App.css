@@ -26,6 +26,11 @@ ol, ul {
   justify-content: center;
 }
 
+.board {
+  padding: 3em;
+}
+
+
 .board-row:after {
   clear: both;
   content: "";
@@ -43,15 +48,15 @@ ol, ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 44px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 64px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 64px;
 }
 
 .square:focus {
