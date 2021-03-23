@@ -9,9 +9,11 @@ function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [xIsNext, setXIsNext] = useState(true)
   const [status, setStatus] = useState('Next player: ' + (xIsNext ? '💎' : '🧁'))
+  const [wins, setWins] = useState({'💎': 0, '🧁': 0})
+  // working on scorecard
 
 
-  // function passes Square component and props inside Board return!
+  // function passes Square component and props
   function renderSquare(i) {
     return (
       <Square
@@ -48,6 +50,7 @@ function Board() {
     const updatedSquares = squares.slice()
     if (winner) {
       setStatus('We Have A Winner!!! Congrats to ' + winner);
+      
       alert('Congrats to ' + winner)
     } else if (!updatedSquares.includes(null)) {
       alert("There is no winner this time. Please try again!")
@@ -96,7 +99,14 @@ function Board() {
       <br></br>
       <Button color='blue' onClick={handleRefresh}>
         Start A New Game!
-      </Button>
+      </Button> <br></br><br></br>
+    <div className="status" style={{ fontSize: 24, border: 'solid grey 1px', padding: "0.5em" }}>
+      Score Card <br></br>
+      <p className="players">
+      💎: <br></br>
+      🧁:
+        </p>
+    </div>
     </div>
   );
 
