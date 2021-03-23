@@ -3,6 +3,9 @@ import Square from './Square'
 import { Button } from 'semantic-ui-react'
 
 function Board() {
+
+  // TODO create/display scorecard/history for 💎s vs 🧁s
+
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [xIsNext, setXIsNext] = useState(true)
   const [status, setStatus] = useState('Next player: ' + (xIsNext ? '💎' : '🧁'))
