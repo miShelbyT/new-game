@@ -1,8 +1,10 @@
 Submitted to Mintbean's March 2021 Hackathon/Learnathon project/challenge.
 
-This is my first project since completing my bootcamp program, my first game build (with a little assist from Reactjs) and my first submission to Mintbean's or any hackathon and I am very happy just to show up.
+This is my first project since completing my bootcamp program, my first game build (with a little assist from Reactjs) and my first submission to Mintbean's or any hackathon and I am very happy just to show up. Tic tac toe with gems and cupcakes!!
 
-Thanks so much to Monarch and Navi and everyone at Mintbean for putting these events together.
+Project was created with Reactjs and Semantic UI.
+
+Thanks so much to Monarch and Navi and everyone at Mintbean.io for putting these events together.
 
 
 
