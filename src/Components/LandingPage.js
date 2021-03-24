@@ -31,7 +31,7 @@ function LandingPage() {
       <Image src='https://i.imgur.com/OdFNPwz.png' alt="semantic ui-r act" size='tiny' circular/>
       <Image src='https://i.imgur.com/cpid3VZ.png' alt="mintbean" style={{marginRight: 20}} size='tiny' circular/>
       <Header as='h5' style={{marginTop: 10}}>This project was created with Reactjs & Semantic UI and riffed off of a reactjs tic tac toe tutorial plus additional functionality, and using functional components & hooks.  <br></br><br></br>
-      Thanks so much to everyone at <a href='mintbean.io'>Mintbean.io</a> for putting this event together. I learned so much and had a lot of fun on this project! </Header>
+      Thanks so much to everyone at <a href='https://mintbean.io/'>Mintbean.io</a> for putting this event together. I learned so much and had a lot of fun on this project! </Header>
       </Segment>
     </div>
   )
