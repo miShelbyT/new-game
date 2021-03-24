@@ -55,6 +55,7 @@ function Board() {
       winner === '💎' ? setGemWins(gemwins + 1) : setCupcakeWins(cupcakewins + 1)
     } else if (!updatedSquares.includes(null)) {
       alert("There is no winner this time. Please try again!")
+      handleRefresh()
     } else {
       setStatus('Next player: ' + (xIsNext ? '🧁' : '💎'));
     }
