@@ -9,7 +9,8 @@ function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [xIsNext, setXIsNext] = useState(true)
   const [status, setStatus] = useState('Next player: ' + (xIsNext ? '💎' : '🧁'))
-  const [wins, setWins] = useState({'💎': 0, '🧁': 0})
+  const [gemwins, setGemWins] = useState(0)
+  const [cupcakewins, setCupcakeWins] = useState(0)
   // working on scorecard
 
 
@@ -49,9 +50,9 @@ function Board() {
     const winner = calculateWinner(squares);
     const updatedSquares = squares.slice()
     if (winner) {
-      setStatus('We Have A Winner!!! Congrats to ' + winner);
-      
+      setStatus(`We Have A Winner!!! Congrats to ${winner}!!!`);
       alert('Congrats to ' + winner)
+      winner === '💎' ? setGemWins(gemwins + 1) : setCupcakeWins(cupcakewins + 1)
     } else if (!updatedSquares.includes(null)) {
       alert("There is no winner this time. Please try again!")
     } else {
@@ -77,6 +78,7 @@ function Board() {
     setStatus('Next player: 💎')
   }
 
+ 
 
   return (
     <div className='board'>
@@ -103,8 +105,10 @@ function Board() {
     <div className="status" style={{ fontSize: 24, border: 'solid grey 1px', padding: "0.5em" }}>
       Score Card <br></br>
       <p className="players">
-      💎: <br></br>
-      🧁:
+      💎: {gemwins}
+      <br></br>
+      🧁: {cupcakewins}
+
         </p>
     </div>
     </div>
