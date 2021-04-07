@@ -47,7 +47,10 @@ ol, ul {
   margin-bottom: 10px;
   font-family:cursive;
   font-weight: bold;
-  font-size: medium;
+  font-size: 24px;
+  border: solid grey 1px;
+  padding: 0.5em;
+  background: #fff;
 }
 
 .square {

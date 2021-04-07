@@ -50,7 +50,7 @@ function Board() {
     const winner = calculateWinner(squares);
     const updatedSquares = squares.slice()
     if (winner) {
-      setStatus(`We Have A Winner!!! Congrats to ${winner}!!!`);
+      setStatus(`Congrats to ${winner}!!!`);
       alert('Congrats to ' + winner)
       winner === '💎' ? setGemWins(gemwins + 1) : setCupcakeWins(cupcakewins + 1)
     } else if (!updatedSquares.includes(null)) {
@@ -83,7 +83,7 @@ function Board() {
 
   return (
     <div className='board'>
-      <div className="status" style={{ fontSize: 24 }}>{status}</div>
+      <div className="status">{status}</div>
       <div className="board-row">
         {renderSquare(0)}
         {renderSquare(1)}
@@ -103,7 +103,7 @@ function Board() {
       <Button color='blue' onClick={handleRefresh}>
         Start A New Game!
       </Button> <br></br><br></br>
-    <div className="status" style={{ fontSize: 24, border: 'solid grey 1px', padding: "0.5em" }}>
+    <div className="status">
       Score Card <br></br>
       <p className="players">
       💎: {gemwins}
