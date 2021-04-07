@@ -1,6 +1,9 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  background-color: pink;
+}
+
+.App {
+  background: rgb(181, 210, 243);
 }
 
 .nav {
