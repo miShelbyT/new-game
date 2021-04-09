@@ -12,10 +12,10 @@ function Nav() {
           <Icon name='gem' color='blue' />
           <p style={{color: "light-blue"}}>(⬆ for more info, click me ⬆)</p>
         </Link>
-        <Header.Content>Welcome To The Mintbean-Inspired Board Game!</Header.Content>
+        <Header.Content>Welcome To New/Improved Tic Tac Toe!</Header.Content>
       </Header>
       <Button as={Link} to='/play' inverted color='violet' >
-        Click Here To Begin!
+        Click Here To Begin
       </Button>
     </div>
   )
