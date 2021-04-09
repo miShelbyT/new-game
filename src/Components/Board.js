@@ -50,8 +50,8 @@ function Board() {
     const winner = calculateWinner(squares);
     const updatedSquares = squares.slice()
     if (winner) {
-      setStatus(`Congrats to ${winner}!!!`);
-      alert('Congrats to ' + winner)
+      setStatus(`Congrats to ${winner}!`);
+      alert('We have a winner!! Congrats to ' + winner)
       winner === '💎' ? setGemWins(gemwins + 1) : setCupcakeWins(cupcakewins + 1)
     } else if (!updatedSquares.includes(null)) {
       alert("There is no winner this time. Please try again!")
