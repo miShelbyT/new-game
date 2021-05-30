@@ -90,3 +90,7 @@ ol, ul {
   flex-wrap: wrap;
 }
 
+.submit-btn {
+  width: 100%;
+}
+

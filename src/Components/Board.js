@@ -100,7 +100,7 @@ function Board() {
         {renderSquare(8)}
       </div>
       <br></br>
-      <Button color='blue' onClick={handleRefresh}>
+      <Button color='blue' onClick={handleRefresh} className="submit-btn">
         Start A New Game!
       </Button> <br></br><br></br>
     <div className="status">
